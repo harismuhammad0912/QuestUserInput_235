@@ -55,3 +55,31 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             modifier = Modifier.width(width = 250.dp),
             label = { Text("Nama Lengkap") }
         )
+
+        Row(
+            modifier = Modifier
+                .width(250.dp)
+                .padding(top = 8.dp),
+            horizontalArrangement = Arrangement.SpaceAround,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            gender.forEach { item ->
+                Row(
+                    modifier = Modifier
+                        .selectable(
+                            selected = (textJk == item),
+                            onClick = { textJk = item }
+                        ),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    RadioButton(
+                        selected = (textJk == item),
+                        onClick = { textJk = item }
+                    )
+                    Text(
+                        text = item,
+                        modifier = Modifier.padding(start = 4.dp)
+                    )
+                }
+            }
+        }
