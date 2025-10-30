@@ -128,11 +128,3 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             Column(
                 modifier = Modifier.padding(horizontal = 15.dp, vertical = 15.dp),
                 verticalArrangement = Arrangement.Center
-            ) {
-                Text(text = "Nama   : " + nama, color = Color.White)
-                Text(text = "Gender : " + jenis, color = Color.White, modifier = Modifier.padding(top = 4.dp))
-                Text(text = "Alamat : " + alamat, color = Color.White, modifier = Modifier.padding(top = 4.dp))
-            }
-        }
-    }
-}
