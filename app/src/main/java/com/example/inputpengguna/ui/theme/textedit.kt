@@ -76,3 +76,21 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         selected = (textJk == item),
                         onClick = { textJk = item }
                     )
+                    Text(
+                        text = item,
+                        modifier = Modifier.padding(start = 4.dp)
+                    )
+                }
+            }
+        }
+
+        OutlinedTextField(
+            value = textAlamat,
+            onValueChange = { textAlamat = it },
+            singleLine = true,
+            modifier = Modifier
+                .width(width = 250.dp)
+                .padding(top = 8.dp),
+            label = { Text(text = "Alamat Lengkap") }
+        )
+
