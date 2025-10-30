@@ -94,3 +94,8 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
             label = { Text(text = "Alamat Lengkap") }
         )
 
+        HorizontalDivider(
+            modifier = Modifier.padding(top = 16.dp, bottom = 16.dp),
+            thickness = 1.dp,
+            color = Color.DarkGray
+        )
