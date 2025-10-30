@@ -102,9 +102,3 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
 
         Button(
             modifier = Modifier.width(250.dp),
-            enabled = textAlamat.isNotEmpty() && textNama.isNotEmpty() && textJk.isNotEmpty(),
-            onClick = {
-                nama = textNama
-                jenis = textJk
-                alamat = textAlamat
-            }
