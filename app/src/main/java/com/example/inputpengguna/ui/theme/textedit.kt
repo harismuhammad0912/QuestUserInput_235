@@ -108,6 +108,3 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                 jenis = textJk
                 alamat = textAlamat
             }
-        ) {
-            Text("Submit")
-        }
