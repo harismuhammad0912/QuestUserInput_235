@@ -76,10 +76,3 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
                         selected = (textJk == item),
                         onClick = { textJk = item }
                     )
-                    Text(
-                        text = item,
-                        modifier = Modifier.padding(start = 4.dp)
-                    )
-                }
-            }
-        }
