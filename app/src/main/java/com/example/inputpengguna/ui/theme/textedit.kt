@@ -102,3 +102,27 @@ fun FormDataDiri(modifier: Modifier = Modifier) {
 
         Button(
             modifier = Modifier.width(250.dp),
+            enabled = textAlamat.isNotEmpty() && textNama.isNotEmpty() && textJk.isNotEmpty(),
+            onClick = {
+                nama = textNama
+                jenis = textJk
+                alamat = textAlamat
+            }
+        ) {
+            Text("Submit")
+        }
+
+        HorizontalDivider(
+            modifier = Modifier.padding(top = 16.dp, bottom = 16.dp),
+            thickness = 1.dp,
+            color = Color.DarkGray
+        )
+
+        ElevatedCard(
+            elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.Black),
+            modifier = Modifier
+                .height(100.dp)
+                .width(300.dp)
+        ) {
+            Column(
