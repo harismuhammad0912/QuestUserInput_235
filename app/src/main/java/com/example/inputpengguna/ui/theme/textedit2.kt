@@ -167,34 +167,3 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
             ) {
                 Text("SUBMIT DATA")
             }
-            Spacer(modifier = Modifier.height(24.dp))
-        }
-
-        item {
-            // Pemisah
-            Divider(
-                modifier = Modifier.padding(vertical = 8.dp),
-                thickness = 1.dp,
-                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
-            )
-            Spacer(modifier = Modifier.height(16.dp))
-        }
-
-        item {
-            // Kartu Hasil
-            ElevatedCard(
-                elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
-                colors = CardDefaults.elevatedCardColors(
-                    containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-                    contentColor = MaterialTheme.colorScheme.onTertiaryContainer
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = 16.dp)
-            ) {
-                Column(
-                    modifier = Modifier.padding(16.dp),
-                    verticalArrangement = Arrangement.spacedBy(4.dp)
-                ) {
-                    Text(text = "✅ **DATA PENDAFTAR**", style = MaterialTheme.typography.titleMedium)
-                    Divider(color = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.2f))
