@@ -142,3 +142,14 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(16.dp))
         }
 
+        item {
+            // Input Alamat
+            OutlinedTextField(
+                value = textAlamat,
+                onValueChange = { textAlamat = it },
+                label = { Text("Alamat Lengkap") },
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(24.dp))
+        }
+
