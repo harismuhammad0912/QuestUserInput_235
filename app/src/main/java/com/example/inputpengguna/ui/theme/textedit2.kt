@@ -56,3 +56,14 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
             )
         }
 
+        item {
+            // Input Nama
+            TextField(
+                value = textNama,
+                onValueChange = { textNama = it },
+                label = { Text("Nama Lengkap") },
+                singleLine = true,
+                modifier = Modifier.fillMaxWidth()
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+        }
