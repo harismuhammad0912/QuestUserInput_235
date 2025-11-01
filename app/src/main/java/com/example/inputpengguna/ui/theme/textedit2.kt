@@ -170,3 +170,13 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(24.dp))
         }
 
+        item {
+            // Pemisah
+            Divider(
+                modifier = Modifier.padding(vertical = 8.dp),
+                thickness = 1.dp,
+                color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+
