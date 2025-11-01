@@ -67,3 +67,40 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
             )
             Spacer(modifier = Modifier.height(16.dp))
         }
+
+        item {
+            // RadioButton JENIS KELAMIN
+            Column(
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(
+                    text = "JENIS KELAMIN",
+                    style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Medium),
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceAround
+                ) {
+                    gender.forEach { item ->
+                        Row(
+                            modifier = Modifier
+                                .selectable(
+                                    selected = selectedJK == item,
+                                    onClick = { selectedJK = item }
+                                )
+                                .padding(vertical = 4.dp),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            RadioButton(
+                                selected = selectedJK == item,
+                                onClick = { selectedJK = item }
+                            )
+                            Text(item, style = MaterialTheme.typography.bodyMedium)
+                        }
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+
