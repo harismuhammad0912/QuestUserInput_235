@@ -35,3 +35,24 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
     val gender: List<String> = listOf("Laki-laki", "Perempuan")
     val statusList: List<String> = listOf("Janda", "Lajang", "Duda", "Menikah") // Tambah "Menikah"
 
+    val isButtonEnabled = textAlamat.isNotEmpty() && textNama.isNotEmpty() && selectedJK.isNotEmpty() && selectedStatus.isNotEmpty()
+
+    LazyColumn( // Menggunakan LazyColumn agar formulir dapat di-scroll
+        modifier = modifier
+            .fillMaxSize()
+            .padding(horizontal = 16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        item {
+            // Header
+            Text(
+                text = "📝 Formulir Pendaftaran Baru",
+                style = MaterialTheme.typography.headlineMedium.copy(fontWeight = FontWeight.Bold),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 24.dp, bottom = 16.dp),
+                textAlign = TextAlign.Center,
+                color = MaterialTheme.colorScheme.primary
+            )
+        }
+
