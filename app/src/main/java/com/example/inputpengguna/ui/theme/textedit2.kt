@@ -180,3 +180,30 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(16.dp))
         }
 
+        item {
+            // Kartu Hasil
+            ElevatedCard(
+                elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+                colors = CardDefaults.elevatedCardColors(
+                    containerColor = MaterialTheme.colorScheme.tertiaryContainer,
+                    contentColor = MaterialTheme.colorScheme.onTertiaryContainer
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 16.dp)
+            ) {
+                Column(
+                    modifier = Modifier.padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(4.dp)
+                ) {
+                    Text(text = "✅ **DATA PENDAFTAR**", style = MaterialTheme.typography.titleMedium)
+                    Divider(color = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.2f))
+                    Text(text = "Nama: **$namaResult**")
+                    Text(text = "Jenis Kelamin: **$jenisResult**")
+                    Text(text = "Status Perkawinan: **$statusResult**")
+                    Text(text = "Alamat: **$alamatResult**")
+                }
+            }
+        }
+    }
+}
