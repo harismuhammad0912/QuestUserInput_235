@@ -198,12 +198,3 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
                 ) {
                     Text(text = "✅ **DATA PENDAFTAR**", style = MaterialTheme.typography.titleMedium)
                     Divider(color = MaterialTheme.colorScheme.onTertiaryContainer.copy(alpha = 0.2f))
-                    Text(text = "Nama: **$namaResult**")
-                    Text(text = "Jenis Kelamin: **$jenisResult**")
-                    Text(text = "Status Perkawinan: **$statusResult**")
-                    Text(text = "Alamat: **$alamatResult**")
-                }
-            }
-        }
-    }
-}
