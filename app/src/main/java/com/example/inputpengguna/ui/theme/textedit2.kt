@@ -104,3 +104,41 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(16.dp))
         }
 
+        item {
+            // RadioButton STATUS PERKAWINAN - PERBAIKAN ERROR
+            Column(
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text(
+                    text = "STATUS PERKAWINAN",
+                    style = MaterialTheme.typography.bodyLarge.copy(fontWeight = FontWeight.Medium),
+                    modifier = Modifier.padding(bottom = 8.dp)
+                )
+
+                // **PERBAIKAN: Mengganti FlowRow dengan Column**
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(4.dp) // Jarak vertikal antar item
+                ) {
+                    statusList.forEach { item ->
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth() // Tambahkan fillMaxWidth untuk Row di dalam Column
+                                .selectable(
+                                    selected = selectedStatus == item,
+                                    onClick = { selectedStatus = item }
+                                ),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            RadioButton(
+                                selected = selectedStatus == item,
+                                onClick = { selectedStatus = item }
+                            )
+                            Text(item, style = MaterialTheme.typography.bodyMedium)
+                        }
+                    }
+                }
+            }
+            Spacer(modifier = Modifier.height(16.dp))
+        }
+
