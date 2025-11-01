@@ -153,3 +153,20 @@ fun FormulirPendaftaranModifikasi(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier.height(24.dp))
         }
 
+        item {
+            // Tombol SUBMIT
+            Button(
+                onClick = {
+                    namaResult = textNama
+                    jenisResult = selectedJK
+                    alamatResult = textAlamat
+                    statusResult = selectedStatus
+                },
+                enabled = isButtonEnabled,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("SUBMIT DATA")
+            }
+            Spacer(modifier = Modifier.height(24.dp))
+        }
+
